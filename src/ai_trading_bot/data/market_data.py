@@ -1,10 +1,8 @@
 from __future__ import annotations
 
-from typing import List
-
 import yfinance as yf
 
-from ai_trading_bot.data.models import Candle
+from ai_trading_bot.data.models import Candle, MarketData
 
 
 class MarketDataService:
@@ -15,11 +13,13 @@ class MarketDataService:
         symbol: str,
         period: str = "1mo",
         interval: str = "1d",
-    ) -> List[Candle]:
+    ) -> MarketData:
+        """Download historical market data and return a MarketData object."""
+
         ticker = yf.Ticker(symbol)
         history = ticker.history(period=period, interval=interval)
 
-        candles: List[Candle] = []
+        candles: list[Candle] = []
 
         for timestamp, row in history.iterrows():
             candles.append(
@@ -33,4 +33,9 @@ class MarketDataService:
                 )
             )
 
-        return candles
+        return MarketData(
+            symbol=symbol,
+            interval=interval,
+            provider="Yahoo Finance",
+            candles=candles,
+        )

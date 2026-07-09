@@ -3,10 +3,12 @@ from ai_trading_bot.data.validator import MarketDataValidator
 
 service = MarketDataService()
 
-candles = service.get_history("AAPL")
+market_data = service.get_history("AAPL")
 
-MarketDataValidator.validate(candles)
+MarketDataValidator.validate(market_data)
 
 print("✅ Market data validated successfully.")
-print(f"Downloaded {len(candles)} candles")
-print(candles[0])
+print(f"Symbol: {market_data.symbol}")
+print(f"Provider: {market_data.provider}")
+print(f"Candles: {len(market_data.candles)}")
+print(f"Latest close: {market_data.latest().close}")

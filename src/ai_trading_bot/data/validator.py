@@ -1,6 +1,6 @@
 """Market data validation."""
 
-from ai_trading_bot.data.models import Candle
+from ai_trading_bot.data.models import MarketData
 
 
 class DataValidationError(ValueError):
@@ -11,13 +11,15 @@ class MarketDataValidator:
     """Validates market data before it is used."""
 
     @staticmethod
-    def validate(candles: list[Candle]) -> None:
-        if not candles:
+    def validate(market_data: MarketData) -> None:
+        """Validate a MarketData object."""
+
+        if not market_data.candles:
             raise DataValidationError("No market data provided.")
 
         previous_timestamp = None
 
-        for candle in candles:
+        for candle in market_data.candles:
             if candle.open <= 0:
                 raise DataValidationError("Open price must be positive.")
 
