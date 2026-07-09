@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/ai_trading_bot/__init__.py
+src/ai_trading_bot.egg-info/PKG-INFO
+src/ai_trading_bot.egg-info/SOURCES.txt
+src/ai_trading_bot.egg-info/dependency_links.txt
+src/ai_trading_bot.egg-info/top_level.txt
+src/ai_trading_bot/core/__init__.py
+src/ai_trading_bot/core/config.py
+tests/test_config.py
