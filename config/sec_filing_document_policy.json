@@ -1,0 +1,26 @@
+{
+  "schema_version": "sec_filing_document_policy_v1",
+  "reviewed_at": "2026-07-16",
+  "research_only": true,
+  "forward_events_only": true,
+  "fetch_index_json": true,
+  "fetch_complete_submission": true,
+  "fetch_primary_document": true,
+  "fetch_xbrl_assets": true,
+  "max_file_bytes": 30000000,
+  "max_complete_submission_bytes": 50000000,
+  "max_package_bytes": 100000000,
+  "max_xbrl_assets": 50,
+  "classification_rules_version": "sec_filing_event_classifier_v1",
+  "sentiment_or_direction_inference": false,
+  "alpha_calculation_enabled": false,
+  "execution_price_selected": false,
+  "paper_fill_applied": false,
+  "notes": [
+    "Historical baseline accessions are categorically excluded from document retrieval.",
+    "The complete submission is retained because it contains the filing document blocks and exhibits; selected XBRL assets are also retained separately.",
+    "Classification identifies neutral event mechanisms and evidence only. It does not infer direction, sentiment, or expected return.",
+    "Primary documents and XBRL assets are limited to 30 MB each; the SEC complete-submission container has a separately bounded 50 MB limit.",
+    "The complete package remains capped at 100 MB decoded and raw; any missing required document, unsafe filename, size-limit breach, or malformed package blocks the accession without calculating alpha."
+  ]
+}

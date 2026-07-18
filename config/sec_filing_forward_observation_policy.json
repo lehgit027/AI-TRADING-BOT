@@ -1,0 +1,32 @@
+{
+  "schema_version": "sec_filing_forward_observation_policy_v1",
+  "reviewed_at": "2026-07-16",
+  "research_only": true,
+  "benchmark_symbol": "VOO",
+  "market_timezone": "America/New_York",
+  "session_scope": "regular_hours_only",
+  "quote_feed": "sip",
+  "quote_page_limit": 1000,
+  "historical_quote_delay_buffer_seconds": 960,
+  "observation_window_seconds": 60,
+  "costs_bps": [5, 25, 50],
+  "horizons": [
+    {"id": "1h", "kind": "trading_minutes", "value": 60},
+    {"id": "1d", "kind": "full_sessions", "value": 1},
+    {"id": "3d", "kind": "full_sessions", "value": 3},
+    {"id": "5d", "kind": "full_sessions", "value": 5},
+    {"id": "20d", "kind": "full_sessions", "value": 20},
+    {"id": "60d", "kind": "full_sessions", "value": 60}
+  ],
+  "return_measure": "midpoint_observation_only",
+  "execution_price_selected": false,
+  "paper_fill_applied": false,
+  "candidate_created": false,
+  "notes": [
+    "A full-session horizon counts sessions after the first-tradable session, avoiding a near-zero holding period for filings observed near the close.",
+    "The target for a session horizon is one second before the recorded regular-session close; no missing quote may be imputed.",
+    "Plans activate only after a genuinely new filing has both an integrity-cleared document package and first-tradable quote evidence.",
+    "Return observations are market measurements, not positions, orders, executions, or paper fills.",
+    "VOO quote-price return is recorded directly, then a separate reconciler may label total-return excess only after immutable corporate-action and independent official schedule evidence pass."
+  ]
+}

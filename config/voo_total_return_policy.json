@@ -1,0 +1,29 @@
+{
+  "schema_version": "voo_total_return_policy_v1",
+  "reviewed_at": "2026-07-16",
+  "research_only": true,
+  "symbol": "VOO",
+  "market_timezone": "America/New_York",
+  "corporate_action_types": [
+    "cash_dividend",
+    "stock_dividend",
+    "forward_split",
+    "reverse_split"
+  ],
+  "lookback_days": 400,
+  "future_days": 400,
+  "page_limit": 1000,
+  "max_pages": 10,
+  "total_return_convention": "holding_period_value_with_cash_distribution_entitlements_no_reinvestment",
+  "require_ledger_retrieved_at_or_after_horizon": true,
+  "require_independent_official_schedule": true,
+  "execution_price_selected": false,
+  "paper_fill_applied": false,
+  "candidate_created": false,
+  "notes": [
+    "Alpaca corporate actions are first-seen observations; provider event dates are never substituted for collector availability.",
+    "A no-action interval passes only when the Alpaca ledger covers the interval after maturity and an archived official Vanguard schedule independently shows no scheduled VOO distribution date inside it.",
+    "An interval crossing a distribution remains blocked until the per-share amount and dates are independently verified; an Alpaca-only amount is not called verified total return.",
+    "Cash distribution entitlement is included in holding-period value without assuming an unobserved reinvestment fill."
+  ]
+}
