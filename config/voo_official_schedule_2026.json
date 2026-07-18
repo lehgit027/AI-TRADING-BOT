@@ -1,0 +1,24 @@
+{
+  "schema_version": "voo_official_distribution_schedule_v1",
+  "reviewed_at": "2026-07-16",
+  "research_only": true,
+  "manual_one_time_capture_only": true,
+  "symbol": "VOO",
+  "fund_name": "Vanguard S&P 500 ETF",
+  "cusip": "922908363",
+  "calendar_year": 2026,
+  "source_url": "https://investor.vanguard.com/content/dam/retail/us/en/pdfs/taxes/DIVDAT_2026.pdf",
+  "terms_url": "https://investor.vanguard.com/terms-conditions",
+  "schedule_rows": [
+    {"record_date": "2026-03-27", "ex_dividend_date": "2026-03-27", "payable_date": "2026-03-31"},
+    {"record_date": "2026-06-26", "ex_dividend_date": "2026-06-26", "payable_date": "2026-06-30"},
+    {"record_date": "2026-09-28", "ex_dividend_date": "2026-09-28", "payable_date": "2026-09-30"},
+    {"record_date": "2026-12-21", "ex_dividend_date": "2026-12-21", "payable_date": "2026-12-23"},
+    {"record_date": "2026-12-30", "ex_dividend_date": "2026-12-30", "payable_date": "2027-01-04"}
+  ],
+  "integrity_limits": [
+    "The annual schedule verifies expected dates, not final per-share amounts.",
+    "Vanguard may revise the schedule; the archived retrieval timestamp and hash define the usable vintage.",
+    "Do not schedule repeated Vanguard downloads or redistribute the source PDF."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "market_timing_policy_v1",
+  "reviewed_at": "2026-07-16",
+  "research_only": true,
+  "market_timezone": "America/New_York",
+  "session_scope": "regular_hours_only",
+  "calendar_provider": "alpaca",
+  "quote_provider": "alpaca",
+  "quote_feed": "sip",
+  "historical_quote_delay_buffer_seconds": 960,
+  "quote_page_limit": 1000,
+  "max_quote_pages_per_session": 10,
+  "max_sessions_per_event": 10,
+  "require_positive_two_sided_quote": true,
+  "execution_price_selected": false,
+  "paper_fill_applied": false,
+  "raw_redistribution_allowed": false,
+  "public_gui": "permission_required",
+  "notes": [
+    "The 16-minute buffer is conservative relative to Alpaca's stated 15-minute free SIP delay.",
+    "A first-tradable resolution is market-timing evidence, not an order, fill, or executable price guarantee.",
+    "Bid, ask, sizes, exchange codes, conditions, and raw responses remain private under Alpaca's redistribution restriction."
+  ]
+}

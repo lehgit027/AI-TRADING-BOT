@@ -1,0 +1,27 @@
+{
+  "schema_version": "sec_filing_watchlist_v1",
+  "reviewed_at": "2026-07-16",
+  "research_only": true,
+  "recommended_collection_interval_seconds": 300,
+  "notes": [
+    "This initial watchlist matches the existing SEC event-research universe.",
+    "Adding an issuer starts a new forward-only baseline; prior filing availability must not be inferred."
+  ],
+  "issuers": [
+    {
+      "symbol": "AAPL",
+      "cik": "0000320193",
+      "issuer_name": "Apple Inc."
+    },
+    {
+      "symbol": "MSFT",
+      "cik": "0000789019",
+      "issuer_name": "Microsoft Corporation"
+    },
+    {
+      "symbol": "NVDA",
+      "cik": "0001045810",
+      "issuer_name": "NVIDIA Corporation"
+    }
+  ]
+}
